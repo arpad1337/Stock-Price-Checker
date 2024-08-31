@@ -1,0 +1,42 @@
+{
+  "name": "stock-price-checker",
+  "version": "1.0.0",
+  "description": "Stock Price Checker REST API",
+  "main": "dist/index.js",
+  "scripts": {
+    "preinstall": "sh ./install-runners.dev.sh",
+    "start": "node --no-warnings dist/index.js",
+    "start:dev": "NODE_OPTIONS='--no-warnings' nodemon --watch 'src/**/*' -e ts,tsx --exec ts-node ./src/index.ts",
+    "build": "tsc",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com:arpad1337/Stock-Price-Checker.git"
+  },
+  "author": "Arpad Kiss <arpad@greeneyes.ai>",
+  "license": "ISC",
+  "private": true,
+  "dependencies": {
+    "@greeneyesai/api-utils": "1.30.0",
+    "@types/node": "20.10.3",
+    "@types/request-ip": "0.0.41",
+    "@types/uuid": "9.0.7",
+    "axios": ">=1.7.4",
+    "body-parser": "1.20.2",
+    "dotenv": "16.3.1",
+    "express-rate-limit": "7.1.5",
+    "rate-limit-redis": "4.2.0",
+    "request-ip": "3.3.0",
+    "typescript": "5.3.2",
+    "uuid": "9.0.1",
+    "yup": "^1.3.3"
+  },
+  "devDependencies": {
+    "nodemon": "^3.1.4",
+    "ts-node": "^10.9.2"
+  },
+  "resolutions": {
+    "es5-ext": ">=0.10.63"
+  }
+}
